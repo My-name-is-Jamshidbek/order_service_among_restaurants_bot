@@ -179,7 +179,7 @@ async def f1(message:types.Message,state:FSMContext):
     phone_number = message.contact.phone_number
     full_name = message.contact.full_name
     user_id = message.contact.user_id
-    await bot.send_message(ADMIN_ID,f"Ordered food:\nRestaurant name: {restaurant_name}\nTable type: {table_type}\nPhone number: {phone_number}\nFull name: {full_name}\nUser id: {user_id}")
+    await bot.send_message(ADMIN_ID,f"Ordered table:\nRestaurant name: {restaurant_name}\nTable type: {table_type}\nPhone number: {phone_number}\nFull name: {full_name}\nUser id: {user_id}")
     await message.answer("Ordered table.",reply_markup=buttons_get_menu_keyboard())
     await state.finish()
 
